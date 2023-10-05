@@ -1,0 +1,124 @@
+#map {
+  height: 380px;
+}
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main-container {
+  position: relative;
+}
+.top {
+  width: 100%;
+  height: 200px;
+  background-image: url("../images/pattern-bg-desktop.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.top h1 {
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-weight: 500;
+}
+.top .search-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.top .search-input input {
+  width: 400px;
+  height: 40px;
+  border-radius: 10px 0px 0px 10px;
+  border: none;
+  padding-left: 10px;
+}
+.top .search-input input:focus {
+  outline: none;
+}
+.top .search-input button {
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+  background-color: hsl(0, 0%, 17%);
+  border: none;
+  height: 40px;
+  width: 40px;
+}
+.top .search-input button img {
+  color: white;
+}
+/* info  */
+.ip-info {
+  position: absolute;
+  left: 70px;
+  top: 130px;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 90%;
+  height: 120px;
+  background-color: #ffffff;
+  z-index: 9999;
+  border-radius: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.item {
+  padding: 15px;
+  border-left: 2px solid hsl(0, 2%, 90%); /* Add a vertical line between columns */
+}
+
+.item:first-child {
+  border-left: none; /* Remove the left border for the first item */
+}
+
+.item h3 {
+  text-transform: uppercase;
+  color: hsl(0, 0%, 59%);
+  font-weight: 400;
+}
+.item h1 {
+  color: hsl(0, 0%, 17%);
+  font-weight: 400;
+}
+/* RESPONSIVTY  */
+
+@media screen and (max-width: 415px) {
+  #map {
+  height: 615px;
+}
+  .top{
+    background-image: url("../images/pattern-bg-mobile.png");
+    height: 300px;
+  }
+  .container {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 10px; 
+  }
+  .item {
+    padding: 10px;
+    border-left: none;
+  }
+  .ip-info {
+    left: 20px;
+    top: 130px;
+    height: auto; 
+    text-align: center;
+  }
+.top .search-input input {
+  width: 280px;
+  height: 50px;
+}
+.top .search-input button{
+  height: 50px;
+}
+}
+
+
